@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="testData">
+        <item>TYJ3P2010U00225_B-265</item>
+        <item>TYJ3P2010F00153_B-327</item>
+        <item>TYJ3P2010AB0148_B-333</item>
+        <item>TYJ3P2010E00126_A-309</item>
+        <item>TYJ3P2010U00204_B-220</item>
+        <item>TYJ3P2010AD0143_B-305</item>
+    </string-array>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:id="@+id/tvs_itemCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/settings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tb_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/curr_localhost"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvs_itemCode" />
+
+    <EditText
+        android:id="@+id/tb_localHost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/lbl_localhost"
+        app:layout_constraintEnd_toStartOf="@+id/bt_scanToIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_" />
+
+
+    <Button
+        android:id="@+id/bt_settingSave"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:text="@string/lbl_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/bt_scanToIn"
+        android:layout_width="25dp"
+        android:layout_height="0dp"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_localHost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_"
+        app:srcCompat="@drawable/ic_scan_mini" />
+
+
+    <com.journeyapps.barcodescanner.CompoundBarcodeView
+        android:id="@+id/barcode_view"
+        android:layout_width="229dp"
+        android:layout_height="229dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_localHost"
+        app:zxing_scanner_layout="@layout/custom_scanner">
+
+        <ImageView
+            android:id="@+id/stat_green"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_green_circle" />
+
+        <ImageView
+            android:id="@+id/stat_red"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible"
+
+            app:srcCompat="@drawable/ic_red_circle" />
+
+        <TextView
+            android:id="@+id/scannerStat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/stat_ready_scan"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </com.journeyapps.barcodescanner.CompoundBarcodeView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
